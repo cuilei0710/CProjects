@@ -3,21 +3,32 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "g++-9 build active file",
-      "command": "/usr/bin/g++-9",
-      "args": [
-        "-g",
-        "${file}",
-        "-o",
-        "${workspaceFolder}/exe/${fileBasenameNoExtension}"
-      ],
-      "options": {
-        "cwd": "/usr/bin"
-      },
-      "problemMatcher": ["$gcc"],
+      "label": "cppbuild",
       "group": {
         "kind": "build",
         "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true,
+        "revealProblems": "onProblem"
+      },
+      "linux": {
+        "command": "/usr/bin/g++-9",
+        "args": [
+          "-g",
+          "${file}",
+          "-o",
+          "${workspaceFolder}/exe/${fileBasenameNoExtension}"
+        ],
+        "options": {
+          "cwd": "/usr/bin"
+        },
+        "problemMatcher": ["$gcc"]
       }
     }
   ]

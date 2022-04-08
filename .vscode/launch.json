@@ -6,21 +6,29 @@
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/exe/${fileBasenameNoExtension}",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
+      "preLaunchTask": "cppbuild",
+      "internalConsoleOptions": "neverOpen",
+      "linux": {
+        "miDebuggerPath": "/usr/bin/gdb",
+        "cwd": "${workspaceFolder}",
+        "args": ["-quiet"],
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+        "environment": [],
+        "stopAtEntry": false,
+        "externalConsole": false,
+        "presentation": {
+          "hidden": false,
+          "group": "",
+          "order": 1
         }
-      ],
-      "preLaunchTask": "g++-9 build active file",
-      "miDebuggerPath": "/usr/bin/gdb"
+      }
     }
   ]
 }
