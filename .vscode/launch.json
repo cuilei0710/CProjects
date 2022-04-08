@@ -11,7 +11,7 @@
       "linux": {
         "miDebuggerPath": "/usr/bin/gdb",
         "cwd": "${workspaceFolder}",
-        "args": ["-quiet"],
+        "args": [],
         "MIMode": "gdb",
         "setupCommands": [
           {
@@ -24,7 +24,7 @@
         "stopAtEntry": false,
         "externalConsole": false,
         "presentation": {
-          "hidden": false,
+          "hidden": true,
           "group": "",
           "order": 1
         }

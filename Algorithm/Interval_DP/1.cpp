@@ -7,7 +7,7 @@ int main()
 {
     int n;
     cin >> n;
-    int a[n], DP[n][n], prefix[n];
+    int a[n + 1], DP[n + 1][n + 1], prefix[n + 1];
     memset(DP, 0x3f, sizeof(DP));
     for (int i = 1; i <= n; i++)
     {
